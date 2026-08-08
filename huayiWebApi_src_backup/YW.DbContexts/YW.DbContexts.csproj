@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Enties\views\**" />
+    <EmbeddedResource Remove="Enties\views\**" />
+    <None Remove="Enties\views\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Riok.Mapperly" Version="4.3.1" />
+    <PackageReference Include="SqlSugar.IOC" Version="2.0.1" />
+    <PackageReference Include="SqlSugarCore" Version="5.1.4.211" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.22" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YW.Common\YW.Common.csproj" />
+  </ItemGroup>
+</Project>
