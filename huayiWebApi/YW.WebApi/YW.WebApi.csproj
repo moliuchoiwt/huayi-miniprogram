@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>
+		</DocumentationFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Remove="Images\**" />
+		<Content Remove="Images\**" />
+		<EmbeddedResource Remove="Images\**" />
+		<None Remove="Images\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="10.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.22" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.22" />
+		<PackageReference Include="Quartz.AspNetCore" Version="3.15.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\YW.DbContexts\YW.DbContexts.csproj" />
+		<ProjectReference Include="..\YW.Service\YW.Service.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="Upload\" />
+	</ItemGroup>	
+</Project>

@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Aliyun.OSS.SDK.NetCore" Version="2.14.1" />
+    <PackageReference Include="LinqKit.Core" Version="1.2.9" />
+    <PackageReference Include="Senparc.CO2NET" Version="3.1.5" />
+    <PackageReference Include="Senparc.CO2NET.APM" Version="2.1.2" />
+    <PackageReference Include="Senparc.Weixin" Version="6.23.0" />
+    <PackageReference Include="Senparc.Weixin.MP" Version="16.24.0" />
+    <PackageReference Include="Senparc.Weixin.Open" Version="4.23.0" />
+    <PackageReference Include="Senparc.Weixin.TenPay" Version="1.18.0" />
+    <PackageReference Include="Senparc.Weixin.TenPayV3" Version="2.3.2" />
+    <PackageReference Include="Senparc.Weixin.WxOpen" Version="3.24.1" />
+    <PackageReference Include="Alipay.AopSdk.Core" Version="2.5.0.1" />
+    <PackageReference Include="aliyun-net-sdk-core" Version="1.6.2" />
+    <PackageReference Include="aliyun-net-sdk-dysmsapi" Version="1.0.0" />
+    <PackageReference Include="SKIT.FlurlHttpClient.Wechat.TenpayV3" Version="3.16.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YW.DbContexts\YW.DbContexts.csproj" />
+  </ItemGroup>
+</Project>

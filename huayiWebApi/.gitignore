@@ -1,0 +1,11 @@
+/YW.WebApi/bin
+/YW.WebApi/obj
+/YW.WebApi/Upload
+/YW.Service/obj
+/YW.Service/bin
+/YW.DbContexts/obj
+/YW.DbContexts/bin
+/YW.Common/bin
+/YW.Common/obj
+/.vs
+/YW.WebApi/Properties
