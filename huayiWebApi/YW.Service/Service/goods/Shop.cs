@@ -443,10 +443,23 @@ namespace YW.Service
             shop.businessImg = WebFileHelper.GetUrl(shop.businessImg);
             var bannerList = WebFileHelper.GetListUrl(shop.bannerUrls);
 
+            // 把审核状态转换成友好文案，方便前端直接显示
+            // 0=待审核 1=已通过 2=被驳回
+            string auditStateText = shop.auditState switch
+            {
+                0 => "审核中，请耐心等待",
+                1 => "已通过审核",
+                2 => "被驳回：" + (string.IsNullOrWhiteSpace(shop.auditIntro) ? "请联系客服" : shop.auditIntro),
+                _ => "未知状态"
+            };
+
             res.data = new
             {
                 shop,
-                bannerList
+                bannerList,
+                auditStateText,//友好文案（前端可直接显示）
+                auditState = shop.auditState,//数字状态（前端逻辑判断用）
+                auditIntro = shop.auditIntro ?? ""//驳回原因
             };
             res.msg = "ok";
             res.code = (int)ResultEnum.success;
